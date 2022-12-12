@@ -245,7 +245,7 @@ header {
 /*=== CURSOS ===*/
 
 .cursos {
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 
 .cursos__container {
@@ -254,23 +254,23 @@ header {
   gap: 2rem;
 }
 
-.cursos {
+.curso {
   background: var(--cor-bg1);
   text-align: center;
   border: 1px solid transparent;
   transition: var(--transição);
 }
 
-.cursos:hover {
+.curso:hover {
   background: transparent;
   border-color: var(--cor-primaria);
 }
 
-.cursos__info {
+.curso__info {
   padding: 2rem;
 }
-
-.cursos__info p {
+ 
+.curso__info p {
   margin: 1.2rem 0 2rem;
   font-size: 0.9rem;
 }
@@ -552,13 +552,14 @@ header {
 }
 
 /* ===== FOOTER ===== */
+
 .footer__container {
   grid-template-columns: 1fr 1fr;
 }
 
 /* ===== CONSULTAS DE MÍDIA - PEQUENA ===== */
 
-@media screen and (max-width: 600) {
+@media screen and (max-width: 600px) {
   .container {
     width: var(--container-width-sm);
   }

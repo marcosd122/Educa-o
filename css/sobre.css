@@ -1,3 +1,5 @@
+/* --- CONQUISTAS ---- */
+
 .sobre__conquistas {
     margin-top: 3rem;
 }
@@ -51,5 +53,125 @@
 .conquistas__card p {
     margin-top: 1rem;
 }
+
+/* --- PROFESSORES ---- */
+
+.professores {
+    background: var(--cor-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);    
+}
+
+.professores__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;    
+}
+
+.professores__membros {
+    background: var(--cor-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    transition: var(--transição);
+    position: relative;
+    overflow: hidden;
+}
+
+.professores__membros:hover {
+    background: transparent;
+    border-color: var(--cor-primaria);
+}
+
+.professores__membros-imagem img {
+    filter: saturate(0);
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.professores__membros:hover img {
+    filter: saturate(1);
+}
+
+.professores__membros-info * {
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.professores__membros-info p {
+    color: var(--cor-clara);
+}
+
+.professores__membros-sociais {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--cor-primaria);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3); 
+    transition: var(--transição);   
+}
+
+.professores__membros:hover 
+.professores__membros-sociais {
+    right: 0;
+}
+
+.professores__membros-sociais a {
+    padding: 1rem;
+}
+
+/* ===== CONSULTAS DE MÍDIA - GRANDE ===== */
+
+@media screen and (max-width: 1024px) {
+    .sobre__conquistas {
+        margin-top: 2rem;
+    }
+
+    .sobre__conquistas-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .sobre__conquistas-esquerda {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .professores__container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .professores__membros {
+        padding: 1rem;
+    }
+}
+
+/* ===== CONSULTAS DE MÍDIA - PEQUENO ===== */
+
+@media screen and (max-width: 600px) {
+    .conquistas__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+
+    .professores__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .professores__membros {
+        padding: 0;
+    }
+
+    .professores__membros p {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
 
     
